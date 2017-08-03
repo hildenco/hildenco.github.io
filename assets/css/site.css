@@ -2,20 +2,17 @@
 body {
 	font-family: 'Lato', sans-serif;
 	line-height: 1.5em;
+	font-size: 1.4em;
+	font-weight: 400;
 }
 
 h1 {
-	color: #552165;
-	margin-left: 0px;
-	/* line-height: 1.3em; */
-	font-size: 30px;
+	color: #552165;	
+	font-size: 32px;
 }
 
 h2 {
-	color: #552165;
-	margin-left: 0px;
-	/* line-height: 1.3em; */
-	font-size: 22px;
+	color: #552165;	
 }
 
 
@@ -26,19 +23,26 @@ h2 {
 }
 
 
+.header h1 {
+	color: #552165;
+	margin-left: 0px;
+	line-height: 0.8em;
+	font-weight: 800;
+	font-size: 36px;
+}
+
+
 .header-links{
 	padding-top: 50px;
 }
 
 .header-links a{
-	color: #562264;
+	color: #552165;
 	padding-top: 20px;
 	padding-bottom: 10px;
 	text-transform: uppercase;
 	line-height: 1.3em;
-    margin-right: 20px;
-	font-size: 18px;
-	font-weight: 600;
+	font-weight: 450;
 }
 
 
@@ -106,10 +110,10 @@ h2 {
 .content h2 {
 	color: #552165;
 	margin-left: 0px;
-	text-transform: uppercase;
+	margin-top: 30px;
 	line-height: 1.3em;
-	font-size: 18px;
-	font-weight: 800;
+	font-size: 20px;
+	font-weight: 500;
 }
 
 .content h3 {
@@ -171,12 +175,12 @@ a.btn.btn-default {
 .footer{
 	background-color: #EEE8EF;	
 	min-height: 200px;	
-	padding-top: 30px;
+	padding-top: 10px;
 	border-top: 2px solid #E9DEEB;
 }
 
 .footer-links{
-	padding-top: 30px;
+	padding-top: 40px;
 }
 
 .footer-links a{
@@ -187,7 +191,6 @@ a.btn.btn-default {
 	line-height: 1.3em;
 	margin-right: 10px;
 	font-size: 14px;
-	font-weight: 600;
 }
 
 .footer-links a.active{
@@ -197,12 +200,13 @@ a.btn.btn-default {
 
 .footer-addr{
 	color: #562264;	
-	/* padding-top: 15px; */
+	margin-top: -5px;
 	font-size: 12px;
 }
 
 .footer-copyright{
-	padding-top: 20px;
+	padding-top: 0px;
+	padding-bottom: 10px;
 }
 
 .links {
@@ -211,19 +215,31 @@ a.btn.btn-default {
 
 /* sm */
 @media (min-width: 768px) {
+	.header-links a{
+		margin-right: 10px;
+		font-size: 16px;
+	}
     .footer-links a{
 		margin-right: 20px;
     }
 }
 /* md */
 @media (min-width: 992px) {
-    .footer-links a{
-		font-size: 20px;
-		margin-right: 25px;
+	.header-links a{
+		margin-right: 16px;
+		font-size: 18px;
+	}
+    .footer-links a{		
+		font-size: 16px;
+		margin-right: 12px;
     }
 }
 /* lg */
 @media (min-width: 1200px) {
+	.header-links a{
+		margin-right: 20px;
+		font-size: 18px;
+	}
     .footer-links a{
 		font-size: 18px;
 		margin-right: 20px;
