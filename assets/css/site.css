@@ -1,9 +1,8 @@
 
 body {
-	font-family: 'Lato', sans-serif;
-	line-height: 1.5em;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.4em;
 	font-size: 1.4em;
-	font-weight: 400;
 }
 
 h1 {
@@ -12,25 +11,38 @@ h1 {
 }
 
 h2 {
-	color: #552165;	
+	color: #552165;
+}
+
+p {
+	padding-bottom: 8px;
+	line-height: 1.6em;
 }
 
 
 .header{
-	border-bottom: 1px solid #e7e7e7;
-	background-image: url("../img/bg-header.png");
-	background-size: 100% 100%;
+	background-color: #EEE8EF;
+	padding-top: 10px;
+	border-top: 2px solid #E9DEEB;
+	border-bottom: 2px solid #E9DEEB;
+	
 }
 
 
 .header h1 {
 	color: #552165;
+	font-family: 'Open Sans', sans-serif;
 	margin-left: 0px;
-	line-height: 0.8em;
-	font-weight: 800;
-	font-size: 36px;
+	margin-bottom: 0px;
+	font-size: 34px;
+	font-weight: 600px;
 }
 
+.header p {
+	color: #555;
+	margin-bottom: 0px;
+	font-size: 16px;
+}
 
 .header-links{
 	padding-top: 50px;
@@ -48,8 +60,12 @@ h2 {
 
 .navbar {
 	min-height: 100px;
-	background-color: rgba(255,255,255,0.6);
-    border-color: white;
+	/* background-color: rgba(255,255,255,0.6); */
+    /* border-color: white; */
+}
+
+.navbar-default {
+	background-color: #EEE8EF;
 }
 
 /* collapsed-nav-bar */
@@ -179,6 +195,15 @@ a.btn.btn-default {
 	border-top: 2px solid #E9DEEB;
 }
 
+.footer p{
+	font-size: 0.8em;
+}
+
+.footer h6{
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
 .footer-links{
 	padding-top: 40px;
 }
@@ -189,8 +214,6 @@ a.btn.btn-default {
 	padding-bottom: 5px;
 	text-transform: uppercase;
 	line-height: 1.3em;
-	margin-right: 10px;
-	font-size: 14px;
 }
 
 .footer-links a.active{
@@ -213,14 +236,27 @@ a.btn.btn-default {
 	
 }
 
+/* xs */
+@media (min-width: 300px) {
+	.header-links a{
+		margin-right: 15px;
+		font-size: 32x;
+	}
+    .footer-links a{
+		margin-right: 10px;
+		font-size: 26x;
+    }
+}
+
 /* sm */
 @media (min-width: 768px) {
 	.header-links a{
-		margin-right: 10px;
-		font-size: 16px;
+		margin-right: 15px;
+		font-size: 32x;
 	}
     .footer-links a{
-		margin-right: 20px;
+		margin-right: 15px;
+		font-size: 26x;
     }
 }
 /* md */
@@ -231,7 +267,6 @@ a.btn.btn-default {
 	}
     .footer-links a{		
 		font-size: 16px;
-		margin-right: 12px;
     }
 }
 /* lg */
@@ -241,7 +276,7 @@ a.btn.btn-default {
 		font-size: 18px;
 	}
     .footer-links a{
-		font-size: 18px;
+		font-size: 16px;
 		margin-right: 20px;
     }
 }
