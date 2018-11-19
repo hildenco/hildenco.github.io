@@ -1,3 +1,4 @@
-# The hildenco.com website
+# Source for the HildenCo.com website
 
-Please visit our blog at [blog.hildenco.com](https://blog.hildenco.com)
+Our site is available at [https://hildenco.com](https://hildenco.com)
+Please also visit our blog at [https://blog.hildenco.com](https://blog.hildenco.com)
