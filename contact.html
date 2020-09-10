@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact us!
+title: Contact us | HildenCo Software
 permalink: /contact/
 ---
 
@@ -11,7 +11,7 @@ permalink: /contact/
       <div class="col-md-12">
         <div class="block">
           <h1>Contact us</h1>
-          <p>For more information, please reach out to us.</p>
+          <p>Information on how you can reach out to us.</p>
         </div>
       </div>
     </div>
@@ -21,28 +21,18 @@ permalink: /contact/
 <section id="contact-form">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-12">
         <div class="block">
-          <form>
+          <p>Please, specify our email and your message and we'll get back to you as soon as possible:</p>
+          <p id="my-form-status"></p>
+          <form action="https://formspree.io/mpzyvnna" id="my-form" method="POST">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name">
+              <input name="email" type="email" class="form-control" placeholder="Email Address">
             </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Email Address">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject">
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-12">
-        <div class="block">
-          <form>
             <div class="form-group-2">
-              <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+              <textarea name="message" class="form-control" rows="3" placeholder="Your Message"></textarea>
             </div>
-            <button class="btn btn-default" type="submit" disabled>Send Message</button>
+            <button class="btn btn-default" type="submit" id="my-form-button">Send Message</button>
           </form>
         </div>
       </div>
@@ -50,14 +40,14 @@ permalink: /contact/
     <div id="contact-box" class="row">
       <div class="col-md-6 col-sm-12">
         <div class="block">
-          <h2>Find us Online!</h2>
+          <h2>Or find us online!</h2>
           <ul class="address-block">
             <li>
-              <i class="fa fa-map-marker"></i>Location: Calgary, AB - Canada
+              <i class="fa fa-map-marker"></i>Calgary, AB - Canada
             </li>
-            <li>
-              <i class="fa fa-envelope-o"></i>Email: hildenco@outlook.com
-            </li>
+            <!-- <li>
+              <i class="fa fa-envelope-o"></i>Email: mail@mail.com
+            </li> -->
             <!-- <li>
               <i class="fa fa-phone"></i>Phone:+555 555-5555
             </li> -->
@@ -71,10 +61,10 @@ permalink: /contact/
               <a href="http://www.linkedin.com/in/bruno.hildenbrand"><i class="fa fa-linkedin"></i></a>
             </li>
             <li>
-              <a href="http://www.twitter.com/brunohilden"><i class="fa fa-twitter"></i></a>
+              <a href="http://www.twitter.com/HildencoSw"><i class="fa fa-twitter"></i></a>
             </li>
             <li>
-              <a href="http://www.gitub.com/hildenco"><i class="fa fa-github"></i></a>
+              <a href="http://www.github.com/Hildenco"><i class="fa fa-github"></i></a>
             </li>
           </ul>
         </div>
@@ -105,3 +95,53 @@ permalink: /contact/
     </div>
   </div>
 </section>
+
+
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+  
+      // get the form elements defined in your form HTML above
+      
+      var form = document.getElementById("my-form");
+      var button = document.getElementById("my-form-button");
+      var status = document.getElementById("my-form-status");
+  
+      // Success and Error functions for after the form is submitted
+      
+      function success() {
+        form.reset();
+        button.style = "display: none ";
+        status.innerHTML = "Thanks! We'll get back to you as soon as possible.";
+      }
+  
+      function error() {
+        status.innerHTML = "Oops! There was a problem.";
+      }
+  
+      // handle the form submission event
+  
+      form.addEventListener("submit", function(ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+      });
+    });
+    
+    // helper function for sending an AJAX request
+  
+    function ajax(method, url, data, success, error) {
+      var xhr = new XMLHttpRequest();
+      xhr.open(method, url);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+          success(xhr.response, xhr.responseType);
+        } else {
+          error(xhr.status, xhr.response, xhr.responseType);
+        }
+      };
+      xhr.send(data);
+    }
+  </script>
+  
