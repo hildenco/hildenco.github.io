@@ -23,8 +23,9 @@ permalink: /contact/
     <div class="row">
       <div class="col-md-12">
         <div class="block">
+          <h3>Contact us</h3>
           <p>Please, specify our email and your message and we'll get back to you as soon as possible:</p>
-          <p id="my-form-status"></p>
+          <p id="my-form-status" class="alert alert-danger"></p>
           <form action="https://formspree.io/mpzyvnna" id="my-form" method="POST">
             <div class="form-group">
               <input name="email" type="email" class="form-control" placeholder="Email Address">
@@ -107,7 +108,6 @@ permalink: /contact/
       var status = document.getElementById("my-form-status");
   
       // Success and Error functions for after the form is submitted
-      
       function success() {
         form.reset();
         button.style = "display: none ";
@@ -115,11 +115,10 @@ permalink: /contact/
       }
   
       function error() {
-        status.innerHTML = "Oops! There was a problem.";
+        status.innerHTML = "Oops! There was a problem. Make sure you entered a valid email address.";
       }
   
       // handle the form submission event
-  
       form.addEventListener("submit", function(ev) {
         ev.preventDefault();
         var data = new FormData(form);
@@ -128,7 +127,6 @@ permalink: /contact/
     });
     
     // helper function for sending an AJAX request
-  
     function ajax(method, url, data, success, error) {
       var xhr = new XMLHttpRequest();
       xhr.open(method, url);
