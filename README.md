@@ -1,4 +1,6 @@
-# Source for the HildenCo.com website
+# HildenCo.com website
 
-Our site is available at [https://hildenco.com](https://hildenco.com)
-Please also visit our blog at [https://blog.hildenco.com](https://blog.hildenco.com)
+Our website is available at [https://hildenco.com](https://hildenco.com).
+
+Please visit our blog at [blog.hildenco.com](https://blog.hildenco.com) to learn
+more about ASP.NET, Linux, Docker, Kubernetes, Azure and GCP.
